@@ -25,6 +25,8 @@ for ( i = 0; i < 8; i++ ){
 
 console.log(newPass);*/
 
+/* An idea of how to simply the code above
+
 var randomFunc = {
   lower: getRandomLower,
   upper: getRandomUpper,
@@ -32,7 +34,7 @@ var randomFunc = {
   symbols: getRandomSymbol,
 }
 
-function randomFunc() {
+  function randomFunc() {
   return Math.floor(Math.random() * 8);
 }
 // Generator functions - 
@@ -53,4 +55,4 @@ function getRandomSymbol() {
   return symbols[Math.floor(Math.random() * symbols.length)] 
 
 }
-
+*/
