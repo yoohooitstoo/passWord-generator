@@ -10,6 +10,24 @@ function generatePassword()
   validLowerCase = "abcdefghijklmnopqrstuvwxyz";
   validUpperCase = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
   validSpecialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+
+  //make sure that the password length is correct
+  
+  passwordLength = 0;
+
+  while(true)
+  {
+    passwordLength = prompt("Enter your password Length. (Must be between 8 and 128");
+    if (passwordLength >= 8 && passwordLength <= 128){
+        break;
+    }else{
+      alert("Must be a number between 8 and 128")
+    }
+  }
+
+
+
+
 }
 // Write password to the #password input
 function writePassword() {
