@@ -1,5 +1,27 @@
 // Starting from Scratch 
 
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
+//This function allows you to generate a random password based on the users choices and password length
+function generatePassword()
+{
+  //variables needed to generate a password
+  validNumbers = "0123456789";
+  validLowerCase = "abcdefghijklmnopqrstuvwxyz";
+  validUpperCase = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
+  validSpecialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+}
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
 // // Assignment Code
