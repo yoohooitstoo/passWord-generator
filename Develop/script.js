@@ -25,10 +25,43 @@ function generatePassword()
     }
   }
 
+  // Confirm user wants to use certain values answer should show in box
+  while(true)
+  {
+    //valid Characters is our final result
+    validCharacters = "";
+    if(confirm("Would you like to include numbers in your password?"))
+    {
+      validCharacters+=validNumbers;
+    }
+    if(confirm("Would you like to include lower case in your password?"))
+    {
+      validCharacters+=validLowerCase;
+    }
+    if(confirm("Would you like to include upper case in your password?"))
+    {
+      validCharacters+=validUpperCase;
+    }
+    if(confirm("Would you like to include special characters in your password?"))
+    {
+      validCharacters+=validSpecialCharacters;
+    }
+    if(validCharacters.length === 0)
+    {
+      alert("Please pick one.")
+    }
+    else
+    {
+      break;
+    }
+  }
+
+
 
 
 
 }
+return validCharacters;
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
