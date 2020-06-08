@@ -5,14 +5,14 @@ var generateBtn = document.querySelector("#generate");
 //This function allows you to generate a random password based on the users choices and password length
 function generatePassword() {
   //variables needed to generate a password
-  validNumbers = "0123456789";
-  validLowerCase = "abcdefghijklmnopqrstuvwxyz";
-  validUpperCase = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
-  validSpecialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+  var validNumbers = "0123456789";
+  var validLowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var validUpperCase = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
+  var validSpecialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
   //make sure that the password length is correct
 
-  passwordLength = 0;
+  var passwordLength = 0;
 
   while (true) {
     passwordLength = prompt("Enter your password Length. (Must be between 8 and 128");
@@ -26,7 +26,7 @@ function generatePassword() {
   // Confirm user wants to use certain values answer should show in box
   while (true) {
     //valid Characters is our final result
-   // result = "";
+    result = "";
     validCharacters = "";
     if (confirm("Would you like to include numbers in your password?")) {
       validCharacters += validNumbers;
@@ -50,10 +50,10 @@ function generatePassword() {
   for (i = 0; i < passwordLength; i++) {
     randomIndex = Math.floor(Math.random() * validCharacters.length);
     randomCharacter = validCharacters[randomIndex];
-    //result = result + randomCharacter;
+    result = result + randomCharacter;
   }
 
-  return randomIndex;
+  return result;
 }
 
 // Write password to the #password input
