@@ -50,7 +50,7 @@ function generatePassword() {
   for (i = 0; i < passwordLength; i++) {
     randomIndex = Math.floor(Math.random() * validCharacters.length);
     randomCharacter = validCharacters[randomIndex];
-    result = result + randomCharacter;
+    result += randomCharacter;
   }
 
   return result;
